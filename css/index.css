@@ -4,18 +4,18 @@
 :root{
 
     --primary-text-color: #000;
-    --bg-color: #ffffff;
+    --bg-color: #DEE4E7;
 
-    --btn-color: #fdfdfd;/* button color*/
+    --btn-color: #DEE4E7;/* button color*/
     --btn-bg: #000;/* button bg color*/
 
     
-    --header-link-hover: #000000;
-    --header-link-hover-bg: #bababa36;
+    --header-link-hover: #37474F;
+    --header-link-hover-bg: #37474F;
 
     --input-hover-bd-color: #232323;
     
-    --dropdown-bg: #f3f4f6;
+    --dropdown-bg: #DEE4E7;
     --dropdown-hover-bg: #dddddd84;
 
     --faq-h-text: #0e0e0e;
@@ -28,24 +28,30 @@
 
     --header-bg: #edececa5;
     /* color: #312f2f; */
-    --hero-gradient: #fcfcfc;
+    --hero-gradient: #DEE4E7;
     --hero-bg-img: url("../assets/images/background/dots-dark.svg");
+
+    /* Table Colors for Light Mode */
+    --table-header-bg: #DEE4E7; /* Light background for table headers */
+    --table-row-bg: #e6d8d8; /* White background for table rows */
+    --table-row-hover-bg: #939191; /* Slightly darker hover effect */
+    --table-border-color: #040404; /* Border color for table */
 
 }
 
 .tw-dark {
     --primary-text-color: #fff;
-    --bg-color: #000000;
+    --bg-color: #37474F;
 
-    --btn-color: #000000;/* button color*/
-    --btn-bg: #ffffff;/* button bg color*/
+    --btn-color: #37474F;/* button color*/
+    --btn-bg: #DEE4E7;/* button bg color*/
 
-    --header-link-hover: #ffffff;
+    --header-link-hover: #DEE4E7;
     --header-link-hover-bg: #8a8a8a5e;
 
-    --input-hover-bd-color: #f8f8f8;
+    --input-hover-bd-color: #DEE4E7;
 
-    --dropdown-bg: #171717;
+    --dropdown-bg: #37474F;
     --dropdown-hover-bg: #2d2d2ddb;
 
     --faq-h-text: #efefef;
@@ -54,12 +60,18 @@
     --hr-color: #e1e1e195;
 
     --footer-link: #cfcfcf;
-    --footer-link-hover: #ffffff;
+    --footer-link-hover: #DEE4E7;
 
-    --header-bg: #232323a5;
+    --header-bg: #37474F;
 
-    --hero-gradient: #000;
+    --hero-gradient: #37474F;
     --hero-bg-img: url("../assets/images/background/dots.svg");
+    
+    /* Table Colors for Dark Mode */
+    --table-header-bg: #37474F; /* Dark background for table headers */
+    --table-row-bg: #0c0b0b; /* Dark row background */
+    --table-row-hover-bg: #37474F; /* Darker hover effect */
+    --table-border-color: #555555; /* Border color for table */
 
   }
 
@@ -406,3 +418,281 @@ hr{
     } */
     
 }
+
+/* Table */
+
+/* .container {
+
+    max-width: 1000px;
+    margin-left: 220px;
+    margin-right: 150px;
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+  }
+  
+  h2 {
+    padding-top: 100px;
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+ 
+  h2 small {
+    font-size: 0.5em;
+  }
+  
+  .responsive-table {
+    list-style: none;
+    padding: 0%;
+  }
+    .responsive-table li {
+      border-radius: 3px;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      border: 1px solid var(--table-border-color);
+    }
+    .table-header {
+      background-color: var(--table-header-bg);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .table-row {
+      background-color: var(--table-row-bg);
+      box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    }
+    .table-row:hover {
+      background-color: var(--table-row-hover-bg);
+    }
+
+    .pagination {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .pagination button {
+        padding: 5px 10px;
+        margin: 0 5px;
+        background-color: var(--btn-bg);
+        color: var(--btn-color);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .pagination button:disabled{
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .page-number {
+        margin: 0 10px;
+        font-size: 18px;
+    }
+    
+    .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8 {
+      flex-basis: 25%;
+        padding: 0px 10px;
+        text-align: center;
+    }
+    
+    
+    @media all and (max-width: 767px) {
+      .table-header {
+        display: none;
+      }
+      .table-row{
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .pagination {
+        margin-top: 10px;
+      }
+
+      .page-button {
+        padding: 8px;
+        font-size: 14px;
+      }
+      
+      h2 {
+        font-size: 20px;
+        margin: 15px 0;
+        text-align: center;
+        padding-top: 50px;
+      }
+      h2 small {
+        font-size: 0.5em;
+      }
+      li {
+        display: block;
+        padding: 10px 0;
+      }
+      .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 {
+        
+        flex-basis: 100%;
+        padding: 10px 0;
+        text-align: left;
+        
+      }
+      .col {
+        display: flex;
+        padding: 10px 0;
+        &:before {
+          color: #6C7A89;
+          padding-right: 10px;
+          content: attr(data-label);
+          flex-basis: 50%;
+          text-align: right;
+        }
+      }
+    } */
+
+/* Table 2 */
+
+
+/* .container {
+
+    letter-spacing: 1.5px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+
+} */
+
+  .container body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text-color);
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table {
+    width: 100%;
+    height: 100%;
+    padding: 20px 50px;
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+  }
+
+    th, td {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px 20px;
+        border: 1px solid var(--table-border-color);
+        letter-spacing: 2px;
+    }
+
+    th {
+        background-color: var(--table-header-bg);
+        color: var(--primary-text-color);
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    td {
+        background-color: var(--table-row-bg);
+        color: var(--secondary-text-color);
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    tr:hover td {
+        background-color: var(--table-row-hover-bg);
+    }
+
+    .pagination {
+        align-items: center;
+        margin-top: 25px;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+    }
+
+    #btn {
+        padding: 7px 15px;
+        background-color: var(--btn-bg);
+        color: var(--btn-color);
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #btn:active, #btn:hover {
+        background-color: #ccc;
+    }
+
+    
+    .head_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+    }
+
+    .page_limit {
+        font-size: 18px;
+    }
+
+    .page_limit select {
+        font-size: 12px;
+        color: var(--primary-text-color);
+        background-color: var(--table-row-bg);
+        border: none;
+        padding: 2px 5px;
+    }
+  
+  /* h2 {
+    padding-top: 100px;
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+  }
+ 
+  h2 small {
+    font-size: 0.5em;
+  } */
+  
+
+  #search_btn {
+    height: 25px;
+    width: 200px;
+    color: var(--primary-text-color);
+    background-color: var(--table-row-bg);
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #979797;
+    transition: border 0.3s;
+  }
+  
+  #earch_text {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--primary-text-color);
+    background-color: var(--table-row-bg);
+  }
